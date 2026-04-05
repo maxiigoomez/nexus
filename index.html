@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Planificación Crossfit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="nexus-header text-center nexus-header-bg">
+        <div class="container nexus-header-content"></div>
+    </header>
+    <p class="text-center mt-2 text-secondary">By Gaston Apecetche</p>
+    <p class="text-center mt-2 text-primary ">"LLEGAR CON HAMBRE, NO CANSADO"</p>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                
+                <!-- Selector de Fecha -->
+                <div class="d-flex justify-content-between align-items-center mb-4 p-3 bg-dark rounded shadow-sm border border-secondary">
+                    <div>
+                        <span class="small d-block text-secondary text-uppercase" style="letter-spacing: 1px;">Cronograma</span>
+                        <h4 id="current-date-title" class="mb-0 text-uppercase">WOD de Hoy</h4>
+                    </div>
+                    <div class="text-end">
+                        <label for="datePicker" class="form-label small text-secondary">Calendario:</label>
+                        <input type="date" id="datePicker" class="form-control history-selector shadow-none">
+                    </div>
+                </div>
+
+                <!-- Contenido del WOD (Sección Protegida) -->
+                <div id="wod-content" class="wod-card p-4 rounded shadow-lg mb-5">
+                    <div class="text-center py-4">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        <p class="mt-2 text-secondary">Cargando la morision de hoy...</p>
+                    </div>
+                </div>
+
+                <!-- SECCIÓN DESPLEGABLE: VISIÓN / OBJETIVO (SIEMPRE PÚBLICA) -->
+                <div class="vision-section p-3 mb-5">
+                    <div class="accordion" id="visionAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseVision">
+                                    <i class="bi bi-shield-check me-2"></i> Nuestra Visión & Objetivo
+                                </button>
+                            </h2>
+                            <div id="collapseVision" class="accordion-collapse collapse" data-bs-parent="#visionAccordion">
+                                <div class="accordion-body">
+                                    <p class="mb-3"><strong>En el contexto de “Atleta Nexus”</strong>, el nombre transmite la idea de un punto de encuentro o conexión entre atletas, entrenamiento, competencia y evolución personal. Es como el lugar donde todo se une para formar a un atleta completo.
+
+Guía de volumen y intensidad según tu nivel, mantener y sostener el volumen y la intensidad adecuados en relación con tu estilo de vida, particularmente si no es un atleta, y así aprovechar al máximo los beneficios de este programa.
+Por cualquier consulta específica no dudes en consultarme, para personalizar su formato de wod si no puede hacer dicho ejercicio, y así optimizar tus resultados para dar el máximo. 
+
+Métodos que vamos a usar varios métodos, RM, RIR y RPE .
+
+RPE	RIR	% de 1RM (aprox.)
+10	0	100%
+9	1	95%
+8	2	90%
+7	3	85%
+6	4	80%
+
+
+En CrossFit, RM significa “Repetition Maximum” o “Repetición Máxima”, y se refiere al máximo peso que una persona puede levantar para un número específico de repeticiones de un ejercicio, manteniendo una buena técnica.
+
+Por ejemplo:
+	•	1RM (una repetición máxima): el máximo peso que puedes levantar una sola vez en un ejercicio (como en sentadilla, peso muerto, press de banca, etc.).
+	•	3RM: el peso máximo que puedes levantar tres veces seguidas sin perder la técnica.
+	•	5RM: lo mismo, pero con cinco repeticiones.
+
+El RM se utiliza mucho en programación para:
+	•	Medir fuerza máxima.
+	•	Calcular porcentajes de trabajo (por ejemplo, trabajar al 80% del 1RM).
+	•	Ver progresión en ciclos de fuerza.
+
+RIR significa “Repetitions In Reserve” o “Repeticiones en Reserva”. Es una forma de medir cuán cerca estás del fallo muscular al terminar una serie.
+
+Cómo funciona:
+
+El RIR te indica cuántas repeticiones te quedaron en el tanque al terminar una serie.
+
+Por ejemplo:
+	•	Si haces una serie de sentadillas con 100 kg y terminas con 2 RIR, significa que pudiste haber hecho 2 repeticiones más con buena técnica antes de fallar.
+	•	Si llegas al fallo, estás en 0 RIR.
+
+¿Por qué se usa?
+	•	Es una forma subjetiva pero útil de regular la intensidad sin tener que llegar siempre al fallo.
+	•	Ayuda a evitar sobreentrenamiento.
+	•	Se utiliza para programar entrenamientos más eficientemente, sobre todo en bloques de fuerza o hipertrofia.
+
+Equivalencia aproximada con RPE (Rate of Perceived Exertion):
+	•	RIR 0 = RPE 10 (fallo)
+	•	RIR 1 = RPE 9
+	•	RIR 2 = RPE 8
+… y así sucesivamente.
+
+RPE significa “Rate of Perceived Exertion”, que se traduce como “Tasa de Esfuerzo Percibido”.
+
+Es una escala subjetiva del 1 al 10 que indica cuán duro sientes que fue un esfuerzo o una serie.
+
+Escala básica de RPE:
+	•	RPE 10: Esfuerzo máximo. No podrías haber hecho otra repetición. (Fallo)
+	•	RPE 9: Muy difícil. Tal vez podrías haber hecho 1 repetición más.
+	•	RPE 8: Difícil, pero controlado. Quedaban 2 reps en el tanque.
+	•	RPE 7: Moderado. Quedaban 3 reps o más.
+	•	RPE 6 o menos: Muy ligero. Calentamiento o técnica.
+
+Para qué se usa en CrossFit:
+	•	Para regular la intensidad sin depender exclusivamente de % de 1RM.
+	•	Útil en días donde el rendimiento puede variar (fatiga, sueño, estrés).
+	•	Ayuda a programar trabajo de fuerza, cardio o skill sin llegar al fallo innecesariamente.
+
+Relación con RIR:
+	•	RPE 10 = 0 RIR
+	•	RPE 9 = 1 RIR
+	•	RPE 8 = 2 RIR
+… y así sucesivamente.
+
+Video explicativo: https://www.instagram.com/reel/DGgBT3pRtVJ/?igsh=ajJhYWVjenF5bHA5
+
+Niveles: 
+Nivel 3: Este nivel completó todas las sesiones de entrenamiento según lo prescrito. 
+Cualquier modificación necesaria debe ser discutida conmigo 😎.
+
+Nivel 2: Este nivel se enfoca en seleccionar progresiónes para llevar acabo dicho ejercicio “complejo”, para poder ir de apoco desbloqueándolos. 
+
+Nivel 1: En este nivel está creado para aquellos que recién comienzan o inician con la programación. 
+
+Es fundamental ajustar no solo el volumen e intensidad del acondicionamiento sino también el volumen diario total.
+Con una duración aproximada de 1 hora y 45 minutos a 2 horas . 
+
+A continuación te sugerimos un esquema de lo que puede abarcar tu programa:
+
+Movilidad General y Específica
+Levantamientos
+Fuerza
+Movimientos Específicos 
+Acondicionamiento o Mono estructural
+Accesorios
+
+Esta guía tiene como objetivo ayudarte a establecer un programa más sostenible en el tiempo.
+Puedes buscar un equilibrio entre el Nivel 3 y el Nivel 2 o entre el Nivel 2 y el Nivel 1. 
+Te recomendó escuchar a tu cuerpo y mantener una comunicación constante para descubrir tu fórmula óptima.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección de Comunidad -->
+    <section class="container my-5">
+        <div class="text-center mb-4">
+            <h2 class="text-white">COMMUNITY FEED</h2>
+            <p class="text-info fw-bold">NEXUS EN ACCIÓN</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div id="nexusCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+                    <div class="carousel-indicators"></div>
+                    <div class="carousel-inner rounded border border-secondary"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#nexusCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#nexusCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfHl67KXEXJ7MRu1DP0WtYLZXz3sOHs-D5HeMcMo565U6xkqg/viewform?usp=publish-editor" target="_blank" class="btn btn-outline-info btn-sm">
+                📸 Subir mi foto a la comunidad
+            </a>
+        </div>
+    </section>
+
+    <!-- Botones Flotantes de Contacto -->
+    <div class="contact-buttons">
+        <a href="https://www.instagram.com/nexus_atletas" target="_blank" class="btn-float" title="Instagram">
+            <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://wa.me/59899482704" target="_blank" class="btn-float" title="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer class="text-center py-4 text-secondary border-top border-secondary mt-5">
+        <small>&copy; 2026 Nexus Training System | Excelencia en Entrenamiento</small>
+        <small class="d-block">Pagina desarrollada por <a href="https://www.instagram.com/linkia.pdu" target="_blank">LinkIA</a></small>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+:root {
+            --nexus-blue: #007BFF;
+            --nexus-black: #0D0D0D;
+            --nexus-card: #1A1A1A;
+            --nexus-blue-dark: #004a99;
+        }
+
+        body {
+            background-color: var(--nexus-black);
+            color: #f8f9fa;
+            font-family: 'Inter', sans-serif;
+            padding-bottom: 80px;
+        }
+
+        .navbar-brand, h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .nexus-header {
+            border-bottom: 2px solid var(--nexus-blue);
+            padding: 2rem 0;
+            background: linear-gradient(180deg, #000 0%, var(--nexus-black) 100%);
+        }
+
+        .wod-card {
+            background-color: var(--nexus-card);
+            border: 1px solid #333;
+            border-left: 5px solid var(--nexus-blue);
+            transition: transform 0.3s ease;
+            min-height: 200px;
+        }
+
+        .metcon-box {
+            background-color: rgba(0, 123, 255, 0.1);
+            border: 1px dashed var(--nexus-blue);
+        }
+
+        .btn-nexus {
+            background-color: var(--nexus-blue);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .btn-nexus:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .history-selector {
+            background-color: var(--nexus-card);
+            color: white;
+            border: 1px solid var(--nexus-blue);
+        }
+
+        /* Sección Visión/Objetivo */
+        .vision-section {
+            background: linear-gradient(90deg, rgba(0, 123, 255, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+            border-radius: 15px;
+            border: 1px solid #222;
+        }
+
+        .accordion-item {
+            background-color: transparent;
+            border: none;
+        }
+        
+        .accordion-button {
+            background-color: var(--nexus-card);
+            color: var(--nexus-blue) !important;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            border: 1px solid #333;
+            border-radius: 10px !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: var(--nexus-blue);
+            color: white !important;
+            box-shadow: none;
+        }
+
+        .accordion-button::after {
+            filter: invert(1);
+        }
+
+        .accordion-body {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            border: 1px solid #222;
+            border-top: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Botones de Contacto Flotantes */
+        .contact-buttons {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .btn-float {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--nexus-blue);
+            background-color: var(--nexus-black);
+            border: 2px solid var(--nexus-blue);
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn-float:hover {
+            transform: translateY(-5px);
+            background-color: var(--nexus-blue);
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+            border-color: white;
+        }
+
+        /* Password Style */
+        .lock-container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .nexus-input-group {
+            background: #222;
+            border: 1px solid var(--nexus-blue);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .nexus-input-group input {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            width: 100%;
+            outline: none;
+        }
+
+        .nexus-carousel-img {
+            height: 400px; 
+            object-fit: cover; 
+            filter: brightness(0.7);
+        }
+
+        .nexus-header-bg {
+            background-image: url('nexusLogo.png'); 
+            background-repeat: no-repeat;
+            background-position: center center; 
+            background-size: contain; 
+            position: relative; 
+            padding: 3rem 0; 
+            border-bottom: 2px solid var(--nexus-blue);
+            background-color: #000; 
+            min-height: 300px;
+        }
+
+        p {
+            white-space: pre-wrap;
+        }
