@@ -123,4 +123,33 @@ const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbysBtKkUjwA1UutGK
             renderWOD(e.target.value);
         });
 
+        // Calculadora de porcentajes: calcula peso * (porcentaje / 100)
+        function calcularPorcentaje() {
+            const pesoEl = document.getElementById('pesoInput');
+            const porcEl = document.getElementById('porcInput');
+            const resultEl = document.getElementById('porcResult');
+
+            if (!pesoEl || !porcEl || !resultEl) return;
+
+            const peso = parseFloat(pesoEl.value);
+            const porc = parseFloat(porcEl.value);
+
+            if (isNaN(peso) || isNaN(porc)) {
+                resultEl.innerText = '—';
+                return;
+            }
+
+            const res = peso * (porc / 100);
+            const rounded = Math.round(res * 100) / 100;
+            resultEl.innerText = rounded;
+        }
+
+        const calcBtn = document.getElementById('calcBtn');
+        if (calcBtn) calcBtn.addEventListener('click', calcularPorcentaje);
+
+        ['pesoInput', 'porcInput'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('keypress', (e) => { if (e.key === 'Enter') calcularPorcentaje(); });
+        });
+
         cargarDatosDesdeSheet();

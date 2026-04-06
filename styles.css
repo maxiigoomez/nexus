@@ -61,6 +61,19 @@
             border: 1px solid #222;
         }
 
+                /* Calculadora de porcentajes */
+                .percent-calc {
+                    background-color: rgba(255,255,255,0.02);
+                    border: 1px solid #222;
+                    border-radius: 12px;
+                }
+
+                .percent-calc .form-control {
+                    background: transparent;
+                    border: 1px solid #333;
+                    color: #fff;
+                }
+
         .accordion-item {
             background-color: transparent;
             border: none;
